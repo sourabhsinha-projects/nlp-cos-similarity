@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>{{title}} Cosine Similarity Between Two Documents</title>
+	</head>
+	<body>
+		<h1> Input two text paragraphs to find their similarity scores</h1>
+		<form method="POST">
+		Document1: <textarea name="doc1" rows="10" cols="40"></textarea><br><br>
+		Document2: <textarea name="doc2" rows="10" cols="40"></textarea><br><br><br>
+		<input type="submit">
+		</form>
+			{% if result %}
+				<h2>Cosine Similarity Score <span style="font-weight:normal">between</span></h2>
+				<p>'{{ doc1}}'</p>
+				<p><h2><span style="font-weight:normal">and</span></h2></p>
+				<p>'{{ doc2}}'</p>
+				<h2><span style="font-weight:normal">~ </span>{{ result}}%</h2>
+		 	{% else %}
+				<h2></h2>
+			{% endif %}
+	</body>
+</html>
